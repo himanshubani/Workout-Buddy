@@ -6,11 +6,11 @@ const {
   deleteWorkout,
   updateWorkout
 } = require('../controllers/workoutController')
-const { requireAuth } = require('../middlewares/requireAuth')
+const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router()
 
-// requireAuth middleware is used to verify the token
+// require auth for all workout routes
 router.use(requireAuth)
 
 // GET all workouts
